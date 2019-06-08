@@ -1,8 +1,7 @@
-import static org.junit.Assert.assertEquals;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 public class Level3CodingExam {
@@ -28,7 +27,7 @@ public class Level3CodingExam {
 		votes.add("Pope Francis");
 		votes.add("Edward Snowden");
 
-		assertEquals("pope francis", new VoteProcessor().calculateElectionWinner(votes));
+		Assert.assertEquals("pope francis", new VoteProcessor().calculateElectionWinner(votes));
 	}
 
 	/** If neither candidate has more votes than the other, report a tie by returning the String "TIE". **/
@@ -38,7 +37,7 @@ public class Level3CodingExam {
 		votes.add("pope francis");
 		votes.add("edward Snowden");
 
-		assertEquals("TIE", new VoteProcessor().calculateElectionWinner(votes));
+		Assert.assertEquals("TIE", new VoteProcessor().calculateElectionWinner(votes));
 	}
 
 	/** 
@@ -63,7 +62,7 @@ public class Level3CodingExam {
 		hashmap2.put("Tam", "Fine");
 		hashmap2.put("Bob", "Happy");
 
-		assertEquals(2, new HashMapCalculator().commonKeyValuePairs(hashmap1, hashmap2));
+		Assert.assertEquals(2, new HashMapCalculator().commonKeyValuePairs(hashmap1, hashmap2));
 	}
 }
 
